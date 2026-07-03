@@ -40,7 +40,7 @@ margin: 0;
     display: block;
     text-align: center;
     padding: 10px 0;
-    text-decoration:dashed;
+    text-decoration:none;
     font-size: 1.2rem;
     font-weight: bold;
     color:blueviolet;
@@ -51,7 +51,7 @@ margin: 0;
     background-color: white;
 }
 
-:has(.menu[aria-expanded="true"]) ,nav-links{
+:has(.menu[aria-expanded ="true"]) .nav-links{
     display: unset;
 }
 
@@ -68,8 +68,8 @@ margin: 0;
         display: inline-block;
         padding:15px 20px;
     }
-}
 
-.menu{
-    display: none;
+    .menu{
+         display: none;
+    }   
 }

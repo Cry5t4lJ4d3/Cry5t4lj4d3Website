@@ -20,10 +20,10 @@ import Header from '../components/Header.astro'
 		<Header />
 		<h1>Cry5t4lJ4d3</h1>
 		<script>
-			const menu = document.querySelector('menu');
+			const menu = document.querySelector('.menu');
 
 			menu?.addEventListener('click',()=>{
-				const isExpanded = menu.getAttribute('aria-expanded')=="true";
+				const isExpanded = menu.getAttribute('aria-expanded')==="true";
 				menu.setAttribute('aria-expanded',`${!isExpanded}`);
 			});
 		</script>
