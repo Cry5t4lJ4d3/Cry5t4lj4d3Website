@@ -1,10 +1,11 @@
 html {
-    background-color: #afadade8;
+    background:rgba(0, 0, 0, 0.884);
     font-family: sans-serif;
 }
 
 body {
-    color: rgba(139, 34, 34, 0.795);
+    
+    color: rgba(0, 0, 0, 0.795);
     margin:0 auto;
     width: 100%;
     max-width:80ch;
@@ -16,60 +17,41 @@ body {
     box-sizing:border-box;
 }
 
+
 h1{
     margin:1rem 0;
     font-size: 2.5rem;
 }
 
 .menu{
-    background-color: aqua;
+    background-color: rgb(0, 0, 0);
     border: none;
     color:bisque;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 5px 10px;
 }
-
-.nav-links{
-width:100%;
-display: none;
-margin: 0;
+.center-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
 }
 
-.nav-links a {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    text-decoration:none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color:blueviolet;
+.card{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(3px);
+    border-width: 10px;
+    border: 3px solid rgba(255,255,255,0);
+    padding: 60px 100px;
+    transition: box-shadow 0.3s ease-in-out,border-color 0.3s ease-in-out;
 }
 
-.nav-links a:hover,
-.nav-links a:focus{
-    background-color: white;
-}
-
-:has(.menu[aria-expanded ="true"]) .nav-links{
-    display: unset;
-}
-
-@media screen and (min-width:636px) {
-    .nav-links{
-        margin-left:5em;
-        display: block;
-        position:static;
-        width:auto;
-        background:none;
-    }
-
-    .nav-links a{
-        display: inline-block;
-        padding:15px 20px;
-    }
-
-    .menu{
-         display: none;
-    }   
+.card:hover{
+    border-color: aquamarine;
+    box-shadow:
+        0 0 10px aquamarine
+        0 0 20px aquamarine
+        0 0 50px aquamarine;
 }

@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css'
-import Header from '../components/Header.astro'
+import MainCardAstroComponent from '../components/mainCard.astro'
 ---
 
 <html lang="zh-cn">
@@ -10,22 +10,12 @@ import Header from '../components/Header.astro'
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Crystaljade</title>
-		<style>
-			h1{color:black;
-				font-size: 4rem;}
-		</style>
+		<title>mainCard</title>
 	</head>
 	<body>
-		<Header />
-		<h1>Cry5t4lJ4d3</h1>
+		<MainCardAstroComponent />
 		<script>
-			const menu = document.querySelector('.menu');
-
-			menu?.addEventListener('click',()=>{
-				const isExpanded = menu.getAttribute('aria-expanded')==="true";
-				menu.setAttribute('aria-expanded',`${!isExpanded}`);
-			});
+			import "../scripts/menu.js"
 		</script>
 	</body>
 </html>
