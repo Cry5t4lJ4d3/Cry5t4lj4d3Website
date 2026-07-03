@@ -1,0 +1,29 @@
+---
+const pagetitle = "我是谁？"
+
+const nextstep = ["交互","更多动态画面","CSS"]
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pagetitle}</title>
+	</head>
+	<body>
+        <a href="/">首页</a>
+		<h1>{pagetitle}</h1>
+        <h2>Cry5t4lj4d3</h2>
+        <hr>
+        <h4>这是我的第一个网站</h4>
+        <p>敬请期待</p>
+        <hr>
+        <p>网站的下一步:</p>
+        <ul>
+            {nextstep.map((nextstep) => <li>{nextstep}</li>)}
+        </ul>
+	</body>
+</html>
