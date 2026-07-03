@@ -1,9 +1,16 @@
 ---
-const pagetitle = "我是谁？"
+const pagetitle = "我是谁？";
 
-const nextstep = ["交互","更多动态画面","CSS"]
+const nextstep = ["更多交互","更多动态画面","引入CSS"];
+
+const nextStepColor = "blue";
+
+const fontWeight = "bold"
+
+import '../styles/global.css'
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 ---
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -12,18 +19,25 @@ const nextstep = ["交互","更多动态画面","CSS"]
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pagetitle}</title>
+        <style define:vars={{nextStepColor,fontWeight}} >
+            .nextstep {
+                color:var(--nextStepColor);
+                font-weight: var(--fontWeight);
+            }
+        </style>
 	</head>
 	<body>
-        <a href="/">首页</a>
+        <Header />
 		<h1>{pagetitle}</h1>
-        <h2>Cry5t4lj4d3</h2>
+        <h2>Cry5t4lJ4d3</h2>
         <hr>
         <h4>这是我的第一个网站</h4>
-        <p>敬请期待</p>
+        <p>我正在进行网站搭建的学习</p>
         <hr>
         <p>网站的下一步:</p>
         <ul>
-            {nextstep.map((nextstep) => <li>{nextstep}</li>)}
+            {nextstep.map((nextstep) => <li class="nextstep">{nextstep}</li>)}
         </ul>
+        <Footer />
 	</body>
 </html>
