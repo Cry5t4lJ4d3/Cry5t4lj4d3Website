@@ -1,11 +1,22 @@
 html {
-    background-color: #1a1a1a;
-    background-image: repeating-linear-gradient(45deg,
-    transparent 0px,
-    transparent 4px,
-    rgba(0,0,0,0.8) 4px,
-    rgba(0,0,0,0.8) 8px);
     font-family: sans-serif;
+    overflow: hidden;
+}
+
+html::before{
+    content: "";
+    position: fixed;
+    top:-100%;
+    left:-100%;
+    width: 300%;
+    height: 300%;
+    z-index: -1;
+    background: repeating-conic-gradient(
+    #1a1a1ad5 1% 5% ,
+    #ffffff 6% 10%,
+    #1a1a1ad5 11% 15%
+    );
+    animation: background 30s linear infinite;
 }
 
 body {
@@ -39,11 +50,11 @@ h1{
 .card{
     position: relative;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
     border-width: 10px;
     padding: 180px 280px;
-    transition: box-shadow 0.3s ease,transform .5s ease;
+    transition: box-shadow 0.3s ease,transform .5s ease,background-color 0.5s ease,backdrop-filter 0.8s ease;
 }
 
 .cardh1{
@@ -57,25 +68,16 @@ h1{
 }
 
 .card::before,
-.card::after{
-    content: "";
-    position:absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-repeat: no-repeat;
-    opacity: .5;
-    mix-blend-mode: color-dodge;
-    transition: all .33s ease;
-}
+
 
 
 .card:hover{
+    backdrop-filter: blur(5px);
     border-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 1);
     box-shadow:
-        0 0 10px 10px rgba(255, 255, 255, 0.3),
-        0 0 20px 10px rgba(255, 255, 255, 0.5),
+        0 0 10px 10px rgba(0, 0, 0, 0.3),
+        0 0 20px 10px rgba(248, 248, 248, 0.5),
         0 0 40px 20px rgba(255, 255, 255, 0.8);
 }
 
@@ -84,7 +86,7 @@ h1{
         position: relative;
         border-radius: 5px;
         background-color: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(3px);
+        backdrop-filter: blur(5px);
         border-width: 10px;
         border: solid rgba(255,255,255,0);
         padding: 100px 150px;
@@ -97,4 +99,9 @@ h1{
         0 0 15px 10px rgba(255, 255, 255, 0.5),
         0 0 30px 20px rgba(255, 255, 255, 0.8);
     }
+}
+
+@keyframes background {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }
