@@ -11,8 +11,8 @@ cards.addEventListener("mousemove", function(e){
         //倾斜角度计算
     var tp = ((px-50)/1.5)
     var lp = ((py-50)/1.5)
-    var ty = (tp/2)*-1;
-    var tx = (lp/2*.5);
+    var tx = (tp/2)*-1;
+    var ty = (lp/1.5*.5);
     //css实现
     cards.style.transform = `rotateX(${ty}deg) rotateY(${tx}deg)`;
     //css应用
