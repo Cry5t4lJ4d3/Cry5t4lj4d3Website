@@ -88,6 +88,13 @@ h1{
         0 0 40px 20px rgba(255, 255, 255, 0.8);
 }
 
+.card:hover .cardh1{
+        text-shadow:
+            0 0 3px #e5ff00,
+            0 0 5px #e5ff00,
+            0 0 10px #00eeff
+}
+
 @media screen and (max-width:636px) {
     .card{
         position: relative;
