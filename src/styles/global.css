@@ -18,9 +18,9 @@ html::before{
     height: 300%;
     z-index: -1;
     background: repeating-conic-gradient(
-    #1a1a1ad5 1% 5% ,
-    #ffffff 6% 10%,
-    #1a1a1ad5 11% 15%
+    #ffffff 1% 5% ,
+    #e0d202ab 6% 10%,
+    #ffffff 11% 15%
     );
     animation: background 30s linear infinite;
 }
@@ -28,21 +28,20 @@ html::before{
 body {
     
     color: rgba(0, 0, 0, 0.795);
-    margin:0 auto;
-    width: 100%;
+    margin: auto;
     max-width:80ch;
-    padding: 1rem;
-    line-height:1.5;
 }
-
-* {
-    box-sizing:border-box;
-}
-
 
 h1{
     margin:1rem 0;
     font-size: 2.5rem;
+}
+
+.text1{
+    position:relative;
+    font-size: medium;
+    top:100px;
+    left:80px;
 }
 
 .center-container{
@@ -55,11 +54,12 @@ h1{
 
 .card{
     position: relative;
+    width: 600px;
+    min-height: 400px;
     border-radius: 5px;
+    box-shadow: 0 0 10px 10px rgb(0, 0, 0,0.3);
     background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(5px);
-    border-width: 10px;
-    padding: 180px 280px;
+    backdrop-filter: blur(15px);
     transition: box-shadow 0.3s ease,transform 0.1s ease,background-color 0.5s ease,backdrop-filter 0.8s ease;
 }
 
@@ -73,10 +73,6 @@ h1{
     transform: translate(-50%,50%);
     margin:0;
 }
-
-.card::before,
-
-
 
 .card:hover{
     backdrop-filter: blur(5px);
@@ -118,4 +114,8 @@ h1{
 @keyframes background {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
+}
+
+@keyframse Idle{
+
 }
