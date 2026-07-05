@@ -1,6 +1,27 @@
 ---
-title:'变形监测重点'
+title: '变形监测重点'
 ---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      max-width: 80ch;
+      margin: auto;
+      color: rgba(0, 0, 0, 0.8);
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+    }
+    table td, table th {
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      padding: 6px 10px;
+    }
+  </style>
 # 变形监测定义
   对被监测的对象或物体进行测量以确定其空间位置及内部形态随时间的变化特征。
 ## 变形监测目的
@@ -66,22 +87,31 @@ title:'变形监测重点'
 ## 交会法观测
 #### 测角交会法
 已知两个工作站基点坐标$(x_A,y_A),(x_b,y_b)$以及对应水平角$\alpha、\beta$,则监测点P的平面坐标为
-$$\begin{cases}
-x_p=\frac{=x_Acot\beta+x_Bcot\alpha+(y_B-y_A)}{cot\alpha+cot\beta}\\
+$$
+\begin{cases}
+x_p=\frac{x_Acot\beta+x_Bcot\alpha+(y_B-y_A)}{cot\alpha+cot\beta}\cr
 y_p=\frac{y_Acot\beta+y_bcot\alpha-(x_B-x_A)}{cot\alpha+cot\beta}
-\end{cases}$$
+\end{cases}
+$$
 
 #### 测边交会法
 已知两个工作站基点坐标$(x_A,y_A),(x_b,y_b)$,以及A到p的距离a,B到p的距离b可以算出p的平面坐标：
 $$\angle  PAB=arccos\frac{b^2+s^2_{AB}-a^2}{2bs_{AB}}$$
 得到$\alpha_{AP}=\alpha_{AB}-\angle PAB$
 故有
-$$\begin{cases}x_p=x_A+bcos\alpha_{AP}\\
-y_p=y_A+bsin\alpha_{AP}\end{cases}$$
+$$
+\begin{cases}x_p=x_A+bcos\alpha_{AP}\cr
+y_p=y_A+bsin\alpha_{AP}
+\end{cases}
+$$
 
 #### 后方交会法
 已知三个点ABC,以及坐标$(x_A,y_A)(x_B,y_B)(x_C,y_C)$,对ABC分别观测两个水平角$\alpha,\beta$
-$$\begin{cases}x_p=x_b+\Delta x_{BP}\\y_p=y_b+k\cdot\Delta x_{BP}\end{cases}$$
+$$
+\begin{cases}x_p=x_b+\Delta x_{BP}\cr
+y_p=y_b+k\cdot\Delta x_{BP}
+\end{cases}
+$$
 式中  
 $k=\frac{a+c}{b+d}$  
 $\Delta x_{BP}=\frac{a-bk}{1+k^2}$  
@@ -236,7 +266,7 @@ $d=(y_C-y_B)+(x_c-y_B)cot\beta$
     <td>监测仪器和仪表</td>
   </tr>
   <tr>
-    <td colspan="4">(一)</td>
+    <td>(一)</td>
     <td>围护结构</td>
   </tr>
   <tr>
@@ -263,7 +293,7 @@ $d=(y_C-y_B)+(x_c-y_B)cot\beta$
   <tr><td>4</td><td>立柱</td><td>沉降</td><td>水准仪等</td></tr>
   <tr><td>5</td><td>坑底土层</td><td>隆起</td><td>水准仪等</td></tr>
   <tr><td>6</td><td>坑内地下水</td><td>水位</td><td>监测井、孔隙水压力探头、频率仪等</td></tr>
-  <tr><td colspan="4">(二)</td><td>周围环境</td></tr>
+  <tr><td>(二)</td><td>周围环境</td></tr>
   <tr><td rowspan="2">7</td><td rowspan="2">周围土层</td><td>分层沉降</td><td>分层乘降仪、频率仪等</td></tr>
   <tr><td>水平位移</td><td>全站仪等</td></tr>
   <tr><td rowspan="2">8</td><td rowspan="2">地下管线</td><td>沉降</td><td>分层沉降仪、频率仪等</td></tr>
