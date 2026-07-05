@@ -1,27 +1,7 @@
 ---
 title: '变形监测重点'
+layout: '../../layouts/postLayout.astro'
 ---
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-
-  <style>
-    html {
-      font-family: sans-serif;
-    }
-    body {
-      max-width: 80ch;
-      margin: auto;
-      color: rgba(0, 0, 0, 0.8);
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 1rem 0;
-    }
-    table td, table th {
-      border: 1px solid rgba(0, 0, 0, 0.3);
-      padding: 6px 10px;
-    }
-  </style>
 # 变形监测定义
   对被监测的对象或物体进行测量以确定其空间位置及内部形态随时间的变化特征。
 ## 变形监测目的

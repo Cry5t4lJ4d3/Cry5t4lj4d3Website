@@ -1,0 +1,17 @@
+---
+const { frontmatter } = Astro.props;
+import '../styles/table.css'
+import 'katex/dist/katex.min.css';
+---
+
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8" />
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <article>
+      <slot />
+    </article>
+  </body>
+</html>
